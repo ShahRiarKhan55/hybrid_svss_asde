@@ -1,0 +1,6 @@
+# Large generated CSV datasets
+hybrid_al_sde/combined_hybrid_al_sde.csv
+hybrid_svts_sde/combined_hybrid_svts_sde.csv
+raw_al/combined_raw_al.csv
+sde/combined_sde.csv
+svts/combined_svts.csv
