@@ -1,3 +1,140 @@
 AL 1 1 216.97s fits=314
 AL 1 2 209.74s fits=314
 AL 1 3 102.11s fits=314
+AL 1 4 233.59s fits=314
+AL 1 5 113.96s fits=314
+AL 10 1 31.78s fits=316
+AL 10 2 112.11s fits=316
+AL 10 3 123.67s fits=316
+AL 10 4 29.60s fits=316
+AL 10 5 29.89s fits=316
+AL 20 1 41.33s fits=316
+AL 20 2 63.56s fits=316
+AL 20 3 37.29s fits=316
+AL 20 4 37.16s fits=316
+AL 20 5 36.93s fits=316
+SVTS 1 1 28.15s fits=314
+SVTS 1 2 21.28s fits=314
+SVTS 1 3 21.58s fits=314
+SVTS 1 4 21.34s fits=314
+SVTS 1 5 21.28s fits=314
+SVTS 10 1 22.06s fits=316
+SVTS 10 2 22.78s fits=316
+SVTS 10 3 25.20s fits=316
+SVTS 10 4 22.11s fits=316
+SVTS 10 5 21.85s fits=316
+SVTS 20 1 24.43s fits=316
+SVTS 20 2 24.69s fits=316
+SVTS 20 3 24.65s fits=316
+SVTS 20 4 24.64s fits=316
+SVTS 20 5 27.46s fits=316
+Hybrid 1 1 2.55s fits=2
+Hybrid 1 2 2.40s fits=2
+Hybrid 1 3 2.42s fits=2
+Hybrid 1 4 2.44s fits=2
+Hybrid 1 5 2.42s fits=2
+Hybrid 10 1 2.67s fits=2
+Hybrid 10 2 2.65s fits=2
+Hybrid 10 3 2.70s fits=2
+Hybrid 10 4 2.68s fits=2
+Hybrid 10 5 2.66s fits=2
+Hybrid 20 1 2.54s fits=2
+Hybrid 20 2 2.73s fits=2
+Hybrid 20 3 3.47s fits=2
+Hybrid 20 4 2.70s fits=2
+Hybrid 20 5 2.80s fits=2
+SDE 1 1 0.08s fits=0
+SDE 1 2 0.06s fits=0
+SDE 1 3 0.06s fits=0
+SDE 1 4 0.06s fits=0
+SDE 1 5 0.06s fits=0
+SDE 10 1 0.06s fits=0
+SDE 10 2 0.06s fits=0
+SDE 10 3 0.07s fits=0
+SDE 10 4 0.06s fits=0
+SDE 10 5 0.06s fits=0
+SDE 20 1 0.07s fits=0
+SDE 20 2 0.07s fits=0
+SDE 20 3 0.07s fits=0
+SDE 20 4 0.07s fits=0
+SDE 20 5 0.07s fits=0
+path 1 train 316 test 2857
+GPR 1 1 0.17s
+GPR 1 2 0.18s
+GPR 1 3 0.17s
+GPR 1 4 0.17s
+GPR 1 5 0.18s
+SVR 1 1 0.90s
+SVR 1 2 0.86s
+SVR 1 3 0.89s
+SVR 1 4 1.24s
+SVR 1 5 0.89s
+MLP 1 1 1.13s
+MLP 1 2 1.04s
+MLP 1 3 1.05s
+MLP 1 4 1.75s
+MLP 1 5 0.99s
+DGPR 1 1 6.19s
+DGPR 1 2 5.74s
+DGPR 1 3 5.71s
+DGPR 1 4 5.53s
+DGPR 1 5 5.60s
+path 10 train 317 test 2855
+GPR 10 1 0.19s
+GPR 10 2 0.18s
+GPR 10 3 0.19s
+GPR 10 4 0.19s
+GPR 10 5 0.18s
+SVR 10 1 0.89s
+SVR 10 2 0.88s
+SVR 10 3 0.91s
+SVR 10 4 1.10s
+SVR 10 5 0.88s
+MLP 10 1 0.47s
+MLP 10 2 0.45s
+MLP 10 3 0.46s
+MLP 10 4 0.45s
+MLP 10 5 0.44s
+DGPR 10 1 5.57s
+DGPR 10 2 5.68s
+DGPR 10 3 5.68s
+DGPR 10 4 5.98s
+DGPR 10 5 5.64s
+path 20 train 317 test 2856
+GPR 20 1 0.17s
+GPR 20 2 0.17s
+GPR 20 3 0.18s
+GPR 20 4 0.18s
+GPR 20 5 0.17s
+SVR 20 1 0.81s
+SVR 20 2 0.82s
+SVR 20 3 0.81s
+SVR 20 4 0.81s
+SVR 20 5 0.82s
+MLP 20 1 1.36s
+MLP 20 2 1.32s
+MLP 20 3 1.44s
+MLP 20 4 1.32s
+MLP 20 5 1.74s
+DGPR 20 1 5.96s
+DGPR 20 2 5.88s
+DGPR 20 3 5.83s
+DGPR 20 4 5.99s
+DGPR 20 5 5.55s
+
+Machine: 12th Gen Intel(R) Core(TM) i7-12700H, 31.7 GB RAM, Python 3.14.7, numpy 2.3.5, GPy 1.14.2, scikit-learn 1.9.1, deepgp (git install), 1 thread, Windows-11-10.0.26300-SP0
+
+| Method | GPR fits per path | Selection s/path (median; min-max) |
+|---|---|---|
+| AL | 315 | 92.9 (29.6-233.6) |
+| SVTS | 315 | 22.7 (21.3-28.2) |
+| Hybrid | 2 | 2.6 (2.4-3.5) |
+| SDE | 0 | 0.1 (0.1-0.1) |
+
+| Regressor | fit+predict s/path (median; min-max) | CV tuning s | refit s | fits | peak MB (tracemalloc) |
+|---|---|---|---|---|---|
+| GPR | 0.18 (0.17-0.19) | nan | nan | 1 | 29.3 |
+| SVR | 0.86 (0.81-1.24) | 0.83 | 0.006 | 121 | 0.3 |
+| MLP | 0.95 (0.44-1.75) | 0.72 | 0.225 | 13 | 2.0 |
+| DGPR | 5.76 (5.53-6.19) | nan | nan | 1 | 185.9 |
+FINISHED

@@ -1,0 +1,25 @@
+AL 1 1 43.98s fits=314
+AL 1 2 46.62s fits=314
+AL 1 3 50.56s fits=314
+AL 1 4 50.63s fits=314
+AL 1 5 48.22s fits=314
+AL 10 1 34.63s fits=316
+AL 10 2 32.29s fits=316
+AL 10 3 30.90s fits=316
+AL 10 4 29.15s fits=316
+AL 10 5 29.05s fits=316
+AL 20 1 147.79s fits=316
+AL 20 2 44.23s fits=316
+AL 20 3 45.13s fits=316
+AL 20 4 41.88s fits=316
+AL 20 5 45.00s fits=316
+
+Machine: 12th Gen Intel(R) Core(TM) i7-12700H, 31.7 GB RAM, Python 3.14.7, numpy 2.3.5, GPy 1.14.2, scikit-learn 1.9.1, deepgp (git install), 1 thread, Windows-11-10.0.26300-SP0
+
+| Method | GPR fits per path | Selection s/path (median; min-max) |
+|---|---|---|
+| AL | 315 | 41.4 (29.1-147.8) |
+
+| Regressor | fit+predict s/path (median; min-max) | CV tuning s | refit s | fits | peak MB (tracemalloc) |
+|---|---|---|---|---|---|
+FINISHED
