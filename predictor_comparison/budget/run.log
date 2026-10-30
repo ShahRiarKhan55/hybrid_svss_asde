@@ -1,0 +1,52 @@
+17:32:35 selected path 4
+17:32:35 selected path 2
+17:32:35 selected path 6
+17:32:36 selected path 1
+17:32:36 selected path 3
+17:32:37 selected path 8
+17:32:38 selected path 7
+17:32:45 selected path 12
+17:32:45 selected path 9
+17:32:47 selected path 11
+17:32:47 selected path 13
+17:32:47 selected path 10
+17:32:48 selected path 14
+17:32:55 selected path 17
+17:32:55 selected path 18
+17:32:57 selected path 20
+17:32:57 selected path 19
+17:32:57 selected path 21
+17:32:58 selected path 22
+17:33:03 selected path 24
+17:33:05 selected path 26
+17:33:06 selected path 25
+17:33:07 selected path 27
+17:33:08 selected path 28
+17:33:08 selected path 29
+17:33:13 selected path 32
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "C:\Users\sysdp\OneDrive - ìáç™ëÂäw\Desktop\Research\MY PAPERS\hybrid_svss_asde\predictor_comparison\budget\run.py", line 36, in select
+    assert set(zip(saved.X, saved.Y)) == set(map(tuple, df.loc[svss + asde[:k[0.10]], ["X", "Y"]].values)), "hybrid 10% differs from the saved sites"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: hybrid 10% differs from the saved sites
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sysdp\OneDrive - ìáç™ëÂäw\Desktop\Research\MY PAPERS\hybrid_svss_asde\predictor_comparison\budget\run.py", line 105, in <module>
+    pool.map(select, [p for p in range(1, 33) if not os.path.exists(f"{R}/sel_path{p}.csv")], chunksize=1)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\pool.py", line 774, in get
+    raise self._value
+AssertionError: hybrid 10% differs from the saved sites

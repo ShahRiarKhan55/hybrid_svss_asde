@@ -1,0 +1,58 @@
+10:37:30 FPGA-7 done
+10:37:30 FPGA-9 done
+10:37:31 FPGA-14 done
+10:37:31 FPGA-8 done
+10:37:31 FPGA-2 done
+10:37:32 FPGA-6 done
+10:37:32 FPGA-11 done
+10:37:33 FPGA-1 done
+10:37:34 FPGA-15 done
+10:37:35 FPGA-12 done
+10:37:36 FPGA-5 done
+10:37:36 FPGA-13 done
+10:37:38 FPGA-3 done
+10:37:38 FPGA-4 done
+10:37:38 FPGA-10 done
+why are your arrays not F order?
+why are your arrays not F order?
+why are your arrays not F order?
+10:37:47 FPGA-16 done
+10:38:35 FPGA-20 done
+10:38:37 FPGA-24 done
+10:38:38 FPGA-18 done
+10:38:38 FPGA-21 done
+10:38:39 FPGA-17 done
+10:38:39 FPGA-19 done
+10:38:43 FPGA-26 done
+10:38:43 FPGA-29 done
+10:38:43 FPGA-25 done
+10:38:44 FPGA-30 done
+10:38:46 FPGA-22 done
+10:38:48 FPGA-23 done
+10:38:49 FPGA-31 done
+10:38:50 FPGA-27 done
+10:38:50 FPGA-28 done
+10:38:58 FPGA-32 done
+10:39:44 FPGA-35 done
+10:39:47 FPGA-38 done
+10:39:48 FPGA-34 done
+10:39:48 FPGA-36 done
+10:39:49 FPGA-39 done
+10:39:49 FPGA-40 done
+10:39:51 FPGA-43 done
+10:39:52 FPGA-42 done
+10:39:54 FPGA-33 done
+10:39:54 FPGA-37 done
+10:39:57 FPGA-45 done
+10:39:59 FPGA-46 done
+10:39:59 FPGA-44 done
+10:40:00 FPGA-47 done
+10:40:00 FPGA-41 done
+10:40:01 FPGA-48 done
+10:40:22 FPGA-49 done
+10:40:22 FPGA-50 done
+    fit  mean_delta    std  max|diff vs paper|  p_vs_paper_GPR  frac_extreme  frac_ls<0.01  frac_ls>100  frac_not_converged  mean_train_LL    sec
+iso_raw      0.0798 0.0239              0.0000             NaN        0.0019        0.0019       0.0000              0.0000      -394.9423 0.5682
+ard_raw      0.0758 0.0238              0.0128             0.0        0.0544        0.0381       0.0162              0.0031      -383.5266 0.6841
+iso_std      0.0786 0.0239              0.0075             0.0        0.0000        0.0000       0.0000              0.0000      -390.0260 0.3422
+ard_std      0.0771 0.0237              0.0140             0.0        0.0350        0.0119       0.0231              0.0000      -385.6464 0.4649

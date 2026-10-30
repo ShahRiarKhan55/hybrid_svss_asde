@@ -1,0 +1,7 @@
+dgp1_base ELBO -448.4
+   init {'top_inputs': 'NormalPosterior', 'top_lengthscale_raw': [10.7, 36.73], 'top_kern_var': 1.0, 'top_noise': 1.0, 'top_Kuu_sigma_mean': 0.001, 'input_var_mean': 0.01482, 'input_mean_std': [1.0, 1.0]}
+   learned {'top_inputs': 'NormalPosterior', 'top_lengthscale_raw': [215.9, 84.16], 'top_kern_var': 0.0, 'top_noise': 1.0001, 'top_Kuu_sigma_mean': 0.00073, 'input_var_mean': 1.00001, 'input_mean_std': [0.0, 0.0]}
+dgp2_base ELBO -426.5
+   init {'top_inputs': 'ObsAr', 'top_lengthscale_raw': [10.7, 36.73], 'top_kern_var': 1.0, 'top_noise': 0.01, 'top_Kuu_sigma_mean': 0.001, 'obs_noise': 1.0, 'obs_lengthscale': [1.0, 1.0, 1.0], 'obs_kern_var': 1.0, 'hidden_var_mean': 0.015, 'hidden_mean_std': [1.0, 1.0, 1.0]}
+   learned {'top_inputs': 'ObsAr', 'top_lengthscale_raw': [172.5, 600.15], 'top_kern_var': 18.422, 'top_noise': 0.0229, 'top_Kuu_sigma_mean': 0.00011, 'obs_noise': 0.4932, 'obs_lengthscale': [0.91, 0.79, 13.09], 'obs_kern_var': 1.207, 'hidden_var_mean': 0.02177, 'hidden_mean_std': [0.687, 0.636, 0.024]}
+[('ObservedLayer', 'uncertain_inputs=True', 'NormalPosterior', 'kern dim 3', 'Z (50, 3)'), ('TopHiddenLayer', 'uncertain_inputs=False', 'ObsAr', 'kern dim 2', 'Z (50, 2)')]

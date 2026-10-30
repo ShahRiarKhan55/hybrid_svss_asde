@@ -1,0 +1,115 @@
+== code lines
+raw_al 38 n_train = int(n * TRAIN_RATIO)
+raw_al 41 train_idx = [rng.choice(idx_all)]
+raw_al 47 m.optimize(messages=False)
+raw_al 49 train_idx.append(remaining[np.argmin(var.ravel())])
+raw_al 62 m.optimize(messages=False)
+svts 18 ALPHA, BETA = 0.7, 0.3  # paper's best config
+svts 40 n_train = int(n * TRAIN_RATIO)
+svts 43 train_idx = [rng.choice(idx_all)]
+svts 62 centroid_c = centroid - centroid.mean()
+svts 63 feat_r_c = feat_r - feat_r.mean(axis=1, keepdims=True)
+svts 64 sim = (feat_r_c @ centroid_c) / (
+svts 65 np.linalg.norm(feat_r_c, axis=1) * np.linalg.norm(centroid_c) + 1e-9
+svts 70 score = ALPHA * sim_n + BETA * var_n
+svts 71 train_idx.append(remaining[np.argmax(score)])
+sde 1 import os, random, numpy as np, pandas as pd, GPy, warnings
+sde 4 GPy.util.linalg.jitchol_MAXTRIES = 20
+sde 11 ALPHA, BETA = 2, 2
+sde 12 RATIO = 0.10
+sde 31 def sde_select(xs, ys, n_target, rng):
+sde 33 rng.shuffle(order)
+sde 40 abs(xs[idx] - xs[s]) > ALPHA or abs(ys[idx] - ys[s]) > BETA
+sde 73 kernel = GPy.kern.RBF(input_dim=2)
+sde 74 model = GPy.models.GPRegression(Xtr, ytr, kernel, normalizer=True)
+hybrid_al_sde 14 AL_RATIO         = 0.02
+hybrid_al_sde 42 n, step = len(df), max(1, round(len(df) * 0.01))
+hybrid_al_sde 43 target = max(1, round(n * AL_RATIO))
+hybrid_al_sde 49 train += [rem[i] for i in np.argsort(var)[:pick]]
+hybrid_svss_asde 14 AL_RATIO = 0.03
+hybrid_svss_asde 15 SDE_RATIO = 0.07
+hybrid_svss_asde 16 SVTS_ALPHA = 0.5
+hybrid_svss_asde 17 SVTS_BETA = 0.5
+hybrid_svss_asde 18 K_NEIGHBORS = 2
+hybrid_svss_asde 19 ROUGHNESS_THRESH = 2.0
+hybrid_svss_asde 22 CALIB_FPGA = 1
+hybrid_svss_asde 48 m.optimize(max_iters=MAX_ITERS, messages=False)
+hybrid_svss_asde 56 step = max(1, round(n * 0.01))
+hybrid_svss_asde 57 target = max(1, round(n * AL_RATIO))
+hybrid_svss_asde 69 m.optimize(messages=False)
+hybrid_svss_asde 87 scores = SVTS_ALPHA * sim_n + SVTS_BETA * var_n
+hybrid_svss_asde 89 train += [remaining[i] for i in np.argsort(scores)[::-1][:pick]]
+hybrid_svss_asde 94 target = max(1, round(len(df) * SDE_RATIO))
+hybrid_svss_asde 109 ab[j] = (int(np.ceil(dx)) + bump, int(np.ceil(dy)) + bump)
+hybrid_svss_asde 110 default_ab = (
+hybrid_svss_asde 128 leftover = [
+hybrid_svss_asde 133 sde += leftover[: target - len(sde)]
+hybrid_svss_asde 142 df = load_dat(CALIB_FPGA, path)
+
+== svts similarity term (path 1, additive GPR on a random 1% set)
+min_sim                  -1.00000
+max_sim                   1.00000
+share_abs_sim_gt_0_999    1.00000
+share_sim_n_gt_0_999      0.49984
+share_sim_n_lt_0_001      0.50016
+rank of feat_r_c: 1 (rows are multiples of (1,-1))
+
+== predictive variance includes the noise term
+var with noise - var without: [0.9601 0.9601 0.9601] noise var (original units): 0.9601
+
+== budgets: orders of practical_cost (FPGA 1)
+        n_min  n_max  all_unique  all_active  all_in_range
+method                                                    
+al        315    317        True        True          True
+hybrid    316    317        True        True          True
+sde       316    317        True        True          True
+svts      315    317        True        True          True
+n_active per path (min/mean/max): 3155 3172.4 3173 | paths with n_active = 3173: 31 of 32
+mean number of selected sites lost on other FPGAs to the 3-sigma filter (vs 317): {'al': np.float64(0.07), 'svts': np.float64(0.07), 'sde': np.float64(0.04), 'hybrid': np.float64(0.04)}
+same-count test: sizes by method: {'al': {'min': 315, 'max': 317}, 'hybrid': {'min': 316, 'max': 317}, 'sde': {'min': 316, 'max': 317}, 'svts': {'min': 315, 'max': 317}}
+
+== ASDE windows (why_sde meta, 32 paths)
+      anchor_mean_window_x  anchor_mean_window_y  code_default_floor_x  code_default_floor_y  round_x  round_y  ceil_x  ceil_y
+mean                 2.330                 2.423                   2.0                 1.969    2.188    2.344     3.0   2.969
+min                  2.032                 1.926                   2.0                 1.000    2.000    2.000     3.0   2.000
+max                  2.632                 2.684                   2.0                 2.000    3.000    3.000     3.0   3.000
+share of final hybrid sites: anchors 0.300, ASDE accepted 0.425, random fill 0.275
+SDE: sites passing the 5x5 test 0.845 of sites, random fill 0.155
+
+== ASDE default window: floor (code) vs real-valued mean (paper text) vs round vs ceil, paths 1-4
+ PATH  mode                                  window window_floor  accepted_additions  same_accepted_as_floor
+    1 float (2.2421052631578946, 2.221052631578947)       (2, 2)                 134                    True
+    1 round                                  (2, 2)       (2, 2)                 134                    True
+    1  ceil                                  (3, 3)       (2, 2)                  76                   False
+    1 floor                                  (2, 2)       (2, 2)                 134                    True
+    2 float  (1.694736842105263, 2.431578947368421)       (1, 2)                 222                    True
+    2 round                                  (2, 2)       (1, 2)                 172                   False
+    2  ceil                                  (2, 3)       (1, 2)                 125                   False
+    2 floor                                  (1, 2)       (1, 2)                 222                    True
+    3 float (1.368421052631579, 2.6736842105263157)       (1, 2)                 216                    True
+    3 round                                  (1, 3)       (1, 2)                 161                   False
+    3  ceil                                  (2, 3)       (1, 2)                 116                   False
+    3 floor                                  (1, 2)       (1, 2)                 216                    True
+    4 float  (2.094736842105263, 2.768421052631579)       (2, 2)                 126                    True
+    4 round                                  (2, 3)       (2, 2)                  95                   False
+    4  ceil                                  (3, 3)       (2, 2)                  80                   False
+    4 floor                                  (2, 2)       (2, 2)                 126                    True
+
+== leakage test: perturb the values of every NON-selected site of FPGA 1 (path 1) and re-run the selection; the order must not change
+{'method': 'hybrid', 'n_selected': 316, 'order_identical': True}
+{'method': 'svts', 'n_selected': 315, 'order_identical': True}
+{'method': 'al', 'n_selected': 315, 'order_identical': True}
+{'method': 'sde', 'n_selected': 316, 'order_identical': True}
+
+== GPR settings: selection loops use the default optimiser (max 1000 iterations), the predictor max_iters=200; same data, compare
+ max_iters         LL               ls              var   noise    status  iters
+       NaN -364.59306 [0.8574, 4.3075] [0.1726, 0.4574] 0.43401 Converged     19
+     200.0 -364.59306 [0.8574, 4.3075] [0.1726, 0.4574] 0.43401 Converged     19
+     200.0 -364.59306 [0.8574, 4.3075] [0.1726, 0.4574] 0.43401 Converged     19
+initial values: lengthscales [1.0, 1.0] variances [1.0, 1.0] noise 1.0 | constraints: +ve
+
+== timing environment
+BLAS/OpenMP threads in this process: [('openblas', 1), ('openblas', 1), ('openmp', 1)]
+power plan: Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced) | current clock MHz: 2300 | max MHz: 2300
+processes using >20 CPU s: python 210; AWCC.Background.Server 104; claude 29; Killer 28; nvcontainer 26; explorer 22
+hybrid selection path 1, 3 repeats (s): [2.79 2.94 2.88] -> spread 5%

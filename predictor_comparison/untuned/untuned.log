@@ -1,0 +1,76 @@
+17:36:46 FPGA-8 done
+17:36:48 FPGA-6 done
+17:36:49 FPGA-14 done
+17:36:50 FPGA-9 done
+17:36:50 FPGA-11 done
+17:36:51 FPGA-7 done
+17:36:51 FPGA-2 done
+17:36:52 FPGA-1 done
+17:36:57 FPGA-15 done
+17:36:58 FPGA-3 done
+17:37:00 FPGA-12 done
+17:37:01 FPGA-13 done
+17:37:06 FPGA-10 done
+why are your arrays not F order?
+why are your arrays not F order?
+why are your arrays not F order?
+17:37:08 FPGA-5 done
+17:37:22 FPGA-4 done
+why are your arrays not F order?
+why are your arrays not F order?
+why are your arrays not F order?
+17:38:35 FPGA-16 done
+17:42:09 FPGA-20 done
+17:42:09 FPGA-19 done
+17:42:10 FPGA-24 done
+17:42:18 FPGA-26 done
+17:42:19 FPGA-21 done
+17:42:22 FPGA-18 done
+17:42:27 FPGA-23 done
+17:42:28 FPGA-29 done
+17:42:28 FPGA-17 done
+17:42:29 FPGA-30 done
+17:42:33 FPGA-25 done
+17:42:33 FPGA-28 done
+17:42:39 FPGA-31 done
+17:42:51 FPGA-22 done
+17:42:58 FPGA-27 done
+17:45:01 FPGA-32 done
+17:47:06 FPGA-35 done
+17:47:28 FPGA-36 done
+17:47:33 FPGA-38 done
+17:47:40 FPGA-39 done
+17:47:42 FPGA-34 done
+17:47:42 FPGA-40 done
+17:48:13 FPGA-42 done
+17:48:14 FPGA-37 done
+17:48:15 FPGA-43 done
+17:48:35 FPGA-45 done
+17:48:36 FPGA-33 done
+17:49:02 FPGA-46 done
+why are your arrays not F order?
+why are your arrays not F order?
+why are your arrays not F order?
+17:49:07 FPGA-44 done
+17:49:41 FPGA-47 done
+17:49:49 FPGA-48 done
+17:50:13 FPGA-41 done
+17:53:03 FPGA-49 done
+17:54:47 FPGA-50 done
+                  model                    group  mean_delta  std_per_path  sec_per_path  p_vs_gpr  mean_train_LL
+                    gpr                  untuned      0.0798        0.0239        0.9898       NaN            NaN
+                m32_ard              GPR variant      0.0746        0.0240        0.8395    0.0000      -381.5564
+                m32_iso              GPR variant      0.0795        0.0240        0.6326    0.0000      -394.5655
+                    mlp                  untuned      0.0787        0.0240        0.6381    0.0000            NaN
+                rbf_ard              GPR variant      0.0758        0.0238        1.1886    0.0000      -383.5266
+                rbf_iso              GPR variant      0.0798        0.0239        0.9716       NaN      -394.9423
+             rbf_iso_r5              GPR variant      0.0798        0.0239        4.9568    0.0125      -394.8808
+                     rf                  untuned      0.0769        0.0262        0.3096    0.0000            NaN
+                    svr                  untuned      0.0757        0.0221        0.1031    0.0000            NaN
+    gp_best_LL_per_path GPR selected by train LL      0.0746        0.0240           NaN    0.0000            NaN
+   svr (tuned, earlier)                    tuned      0.0770        0.0223        0.6007       NaN            NaN
+    rf (tuned, earlier)                    tuned      0.0748        0.0250        5.5631       NaN            NaN
+   mlp (tuned, earlier)                    tuned      0.0782        0.0243        4.0441       NaN            NaN
+deepgp (tuned, earlier)                    tuned      0.0795        0.0243       26.7245       NaN            NaN
+best mean train LL variant: m32_ard | picked per path: {'m32_ard': 1271, 'rbf_ard': 326, 'm32_iso': 2, 'rbf_iso_r5': 1}
+rbf_iso vs paper gpr max |diff| per path: 0.0

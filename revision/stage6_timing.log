@@ -1,0 +1,13 @@
+
+## Sequential timing (one thread, nothing else started by me, FPGA 27, hybrid seed-1 sites, 8 paths, median of 3 repeats)
+| predictor | fit incl. tuning, s | predict on ~2,850 sites, s |
+|---|---|---|
+| Additive RBF GPR | 0.25 | 0.051 |
+| One-lengthscale RBF GPR | 0.22 | 0.035 |
+| SVR (RBF) | 1.85 | 0.027 |
+| Random forest | 5.10 | 0.019 |
+| MLP (tanh, 2 hidden layers) | 7.28 | 0.003 |
+| Deep GP [1,3,2] | 5.34 | 0.000 |
+
+The deep GP function fits and predicts in one call; its time is reported under fit.
+

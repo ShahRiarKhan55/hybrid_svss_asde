@@ -1,0 +1,212 @@
+02:13:53 FPGA-10 path-11 done
+02:14:32 FPGA-2 path-11 done
+02:14:33 FPGA-2 path-12 done
+02:14:34 FPGA-2 path-27 done
+02:14:38 FPGA-2 path-9 done
+02:15:07 FPGA-2 path-24 done
+02:15:21 FPGA-2 path-8 done
+02:15:25 FPGA-2 path-22 done
+02:15:28 FPGA-2 path-3 done
+02:15:31 FPGA-10 path-2 done
+02:15:35 FPGA-2 path-19 done
+02:15:38 FPGA-10 path-7 done
+02:15:40 FPGA-2 path-29 done
+02:15:43 FPGA-2 path-10 done
+02:15:45 FPGA-10 path-3 done
+02:15:48 FPGA-2 path-13 done
+02:30:50 FPGA-10 path-12 done
+02:31:04 FPGA-10 path-25 done
+02:32:05 FPGA-10 path-17 done
+02:32:23 FPGA-10 path-20 done
+02:32:32 FPGA-10 path-13 done
+02:32:38 FPGA-20 path-7 done
+02:32:44 FPGA-10 path-32 done
+02:33:00 FPGA-20 path-6 done
+02:33:03 FPGA-10 path-26 done
+02:33:13 FPGA-10 path-28 done
+02:33:15 FPGA-20 path-1 done
+02:33:19 FPGA-10 path-29 done
+02:33:21 FPGA-20 path-4 done
+02:33:30 FPGA-20 path-5 done
+02:33:34 FPGA-20 path-8 done
+02:33:44 FPGA-20 path-9 done
+02:48:15 FPGA-20 path-10 done
+02:48:50 FPGA-20 path-11 done
+02:50:06 FPGA-20 path-12 done
+02:50:11 FPGA-20 path-14 done
+02:50:13 FPGA-20 path-13 done
+02:50:33 FPGA-20 path-15 done
+02:50:34 FPGA-20 path-23 done
+02:50:40 FPGA-20 path-16 done
+02:50:44 FPGA-20 path-19 done
+02:50:52 FPGA-20 path-17 done
+02:50:54 FPGA-20 path-18 done
+02:51:04 FPGA-20 path-25 done
+02:51:06 FPGA-20 path-20 done
+02:51:11 FPGA-20 path-21 done
+02:51:13 FPGA-20 path-22 done
+02:51:30 FPGA-20 path-24 done
+03:06:25 FPGA-20 path-26 done
+03:06:55 FPGA-20 path-27 done
+03:07:29 FPGA-20 path-32 done
+03:07:35 FPGA-20 path-29 done
+03:07:45 FPGA-20 path-30 done
+03:07:51 FPGA-30 path-1 done
+03:07:54 FPGA-30 path-2 done
+03:07:59 FPGA-20 path-28 done
+03:08:13 FPGA-30 path-8 done
+03:08:17 FPGA-30 path-7 done
+03:08:18 FPGA-30 path-6 done
+03:08:31 FPGA-30 path-5 done
+03:08:37 FPGA-30 path-3 done
+03:08:39 FPGA-20 path-31 done
+03:08:39 FPGA-30 path-4 done
+03:09:35 FPGA-30 path-9 done
+03:24:39 FPGA-30 path-10 done
+03:25:11 FPGA-30 path-11 done
+03:25:25 FPGA-30 path-18 done
+03:25:35 FPGA-30 path-16 done
+03:25:47 FPGA-30 path-12 done
+03:25:54 FPGA-30 path-13 done
+03:25:59 FPGA-30 path-15 done
+03:26:00 FPGA-30 path-20 done
+03:26:00 FPGA-30 path-22 done
+03:26:03 FPGA-30 path-17 done
+03:26:04 FPGA-30 path-19 done
+03:26:05 FPGA-30 path-25 done
+03:26:05 FPGA-30 path-24 done
+03:26:11 FPGA-30 path-21 done
+03:26:12 FPGA-30 path-23 done
+03:27:51 FPGA-30 path-26 done
+03:43:15 FPGA-30 path-27 done
+03:43:44 FPGA-40 path-1 done
+03:43:54 FPGA-30 path-28 done
+03:44:03 FPGA-30 path-29 done
+03:44:03 FPGA-40 path-2 done
+03:44:03 FPGA-30 path-30 done
+03:44:12 FPGA-40 path-10 done
+03:44:22 FPGA-40 path-5 done
+03:44:26 FPGA-30 path-32 done
+03:44:27 FPGA-40 path-6 done
+03:44:31 FPGA-40 path-8 done
+03:44:32 FPGA-30 path-31 done
+03:44:35 FPGA-40 path-4 done
+03:44:39 FPGA-40 path-3 done
+03:44:51 FPGA-40 path-9 done
+03:45:59 FPGA-40 path-12 done
+04:02:45 FPGA-40 path-24 done
+04:02:51 FPGA-40 path-14 done
+04:02:57 FPGA-40 path-13 done
+04:03:09 FPGA-40 path-20 done
+04:03:11 FPGA-40 path-19 done
+04:03:15 FPGA-40 path-17 done
+04:03:19 FPGA-40 path-16 done
+04:03:25 FPGA-40 path-29 done
+04:03:35 FPGA-40 path-22 done
+04:03:36 FPGA-40 path-15 done
+04:03:51 FPGA-40 path-21 done
+04:03:52 FPGA-40 path-23 done
+04:04:03 FPGA-40 path-26 done
+04:04:10 FPGA-40 path-27 done
+04:04:15 FPGA-40 path-28 done
+04:05:28 FPGA-40 path-30 done
+04:18:55 FPGA-50 path-13 done
+04:19:08 FPGA-50 path-15 done
+04:20:55 FPGA-50 path-1 done
+04:21:00 FPGA-50 path-2 done
+04:21:14 FPGA-40 path-31 done
+04:21:19 FPGA-50 path-4 done
+04:21:35 FPGA-50 path-7 done
+04:21:37 FPGA-50 path-10 done
+04:21:38 FPGA-50 path-5 done
+04:21:38 FPGA-50 path-17 done
+04:21:42 FPGA-50 path-8 done
+04:21:50 FPGA-50 path-9 done
+04:21:54 FPGA-50 path-12 done
+04:21:58 FPGA-50 path-16 done
+04:22:25 FPGA-50 path-18 done
+04:22:49 FPGA-50 path-19 done
+04:30:47 FPGA-50 path-31 done
+04:31:24 FPGA-50 path-20 done
+04:31:30 FPGA-50 path-21 done
+04:31:38 FPGA-50 path-30 done
+04:32:27 FPGA-50 path-27 done
+04:32:33 FPGA-50 path-22 done
+04:32:38 FPGA-50 path-25 done
+04:32:43 FPGA-50 path-26 done
+04:32:48 FPGA-50 path-28 done
+04:32:48 FPGA-50 path-32 done
+Traceback (most recent call last):
+  File "C:\Users\sysdp\OneDrive - ìáç™ëÂäw\Desktop\Research\MY PAPERS\hybrid_svss_asde\predictor_comparison\why_dgpr\why.py", line 87, in <module>
+    table()
+    ~~~~~^^
+  File "C:\Users\sysdp\OneDrive - ìáç™ëÂäw\Desktop\Research\MY PAPERS\hybrid_svss_asde\predictor_comparison\why_dgpr\why.py", line 74, in table
+    t = allr.groupby("model").agg(n=("Delta", "size"), mean_delta=("Delta", "mean"), std=("Delta", "std"), sec_per_path=("sec", "mean"),
+                                  train_obj=("TrainObj", "mean"), ls_x=("ls_x", "mean"), ls_y=("ls_y", "mean"), ratio_y_over_x=("ratio_y_over_x", "median"))
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\generic.py", line 2291, in aggregate
+    result = op.agg()
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\apply.py", line 294, in agg
+    return self.agg_dict_like()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\apply.py", line 511, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\apply.py", line 1677, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ~~~~~~~~~~~~~~~~~~~~~~^
+        op_name, selected_obj, selection, kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\apply.py", line 592, in compute_dict_like
+    results.append(getattr(series, op_name)(how, **kwargs))
+                   ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\generic.py", line 464, in aggregate
+    ret = self._aggregate_multiple_funcs(func, *args, **kwargs)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\generic.py", line 522, in _aggregate_multiple_funcs
+    results[key] = self.aggregate(func, *args, **kwargs)
+                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\generic.py", line 456, in aggregate
+    return getattr(self, func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\groupby.py", line 2285, in mean
+    result = self._cython_agg_general(
+        "mean",
+    ...<4 lines>...
+        skipna=skipna,
+    )
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\groupby.py", line 1808, in _cython_agg_general
+    new_mgr = data.grouped_reduce(array_func)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\internals\managers.py", line 2295, in grouped_reduce
+    res = func(arr)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\groupby.py", line 1783, in array_func
+    result = self._grouper._cython_operation(
+        "aggregate",
+    ...<4 lines>...
+        **kwargs,
+    )
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\ops.py", line 963, in _cython_operation
+    return cy_op.cython_operation(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        values=values,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\groupby\ops.py", line 553, in cython_operation
+    return values._groupby_op(
+           ~~~~~~~~~~~~~~~~~~^
+        how=self.how,
+        ^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\arrays\base.py", line 2808, in _groupby_op
+    raise TypeError(
+        f"dtype '{self.dtype}' does not support operation '{how}'"
+    )
+TypeError: dtype 'str' does not support operation 'mean'

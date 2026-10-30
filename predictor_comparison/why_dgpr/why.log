@@ -1,0 +1,115 @@
+22:11:35 FPGA-2 path-15 done
+22:15:56 FPGA-2 path-5 done
+22:15:59 FPGA-2 path-4 done
+22:16:03 FPGA-2 path-14 done
+22:16:13 FPGA-2 path-7 done
+22:16:32 FPGA-2 path-2 done
+22:16:34 FPGA-2 path-16 done
+22:16:36 FPGA-2 path-6 done
+22:16:37 FPGA-2 path-1 done
+22:30:55 FPGA-2 path-17 done
+22:31:07 FPGA-2 path-31 done
+22:32:14 FPGA-2 path-18 done
+22:33:01 FPGA-2 path-21 done
+22:33:22 FPGA-2 path-20 done
+22:33:27 FPGA-2 path-25 done
+22:33:42 FPGA-2 path-23 done
+22:33:49 FPGA-2 path-28 done
+22:34:13 FPGA-2 path-26 done
+22:34:47 FPGA-2 path-32 done
+22:34:50 FPGA-2 path-30 done
+22:48:58 FPGA-10 path-1 done
+22:50:00 FPGA-10 path-4 done
+22:50:24 FPGA-10 path-8 done
+22:50:58 FPGA-10 path-9 done
+22:51:05 FPGA-10 path-5 done
+22:51:31 FPGA-10 path-6 done
+22:51:42 FPGA-10 path-15 done
+22:51:45 FPGA-10 path-10 done
+22:52:12 FPGA-10 path-16 done
+22:52:28 FPGA-10 path-14 done
+22:58:05 FPGA-10 path-19 done
+22:58:29 FPGA-10 path-18 done
+23:06:42 FPGA-10 path-31 done
+23:07:30 FPGA-10 path-21 done
+23:08:19 FPGA-10 path-22 done
+23:08:43 FPGA-10 path-23 done
+23:09:08 FPGA-10 path-24 done
+23:09:34 FPGA-10 path-27 done
+23:09:41 FPGA-10 path-30 done
+23:09:55 FPGA-20 path-2 done
+23:10:35 FPGA-20 path-3 done
+23:39:00 FPGA-30 path-14 done
+23:46:24 FPGA-40 path-7 done
+23:51:02 FPGA-40 path-11 done
+23:55:55 FPGA-40 path-18 done
+00:00:11 FPGA-40 path-25 done
+00:03:36 FPGA-40 path-32 done
+00:08:00 FPGA-50 path-3 done
+00:09:08 FPGA-50 path-6 done
+00:11:01 FPGA-50 path-14 done
+00:13:51 FPGA-50 path-11 done
+00:20:17 FPGA-50 path-24 done
+00:20:33 FPGA-50 path-23 done
+00:20:54 FPGA-50 path-29 done
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "C:\Users\sysdp\OneDrive - ìáç™ëÂäw\Desktop\Research\MY PAPERS\hybrid_svss_asde\predictor_comparison\why_dgpr\why.py", line 48, in job
+    t = time.time(); p, obj, ls = fit(kind, ind, iters, tr, te, fpga * 100 + path)
+                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\OneDrive - ìáç™ëÂäw\Desktop\Research\MY PAPERS\hybrid_svss_asde\predictor_comparison\why_dgpr\why.py", line 36, in fit
+    return m.predict((te[["X", "Y"]].values - mx) / sx)[0].ravel() * sy + my, m.log_likelihood(), lay.kern.lengthscale.values * sx
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\deepgp\models\model.py", line 362, in predict
+    return self.layers[0].predict(x)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\GPy\core\gp.py", line 346, in predict
+    mean, var = self._raw_predict(Xnew, full_cov=full_cov, kern=kern)
+                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\GPy\core\gp.py", line 303, in _raw_predict
+    mu, var = self.posterior._raw_predict(kern=self.kern if kern is None else kern, Xnew=Xnew, pred_var=self._predictive_variable, full_cov=full_cov)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\GPy\inference\latent_function_inference\posterior.py", line 250, in _raw_predict
+    psi0_star = kern.psi0(pred_var, Xnew)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\GPy\kern\src\kernel_slice_operations.py", line 348, in wrap
+    ret = f(self, s.X, s.X2)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\GPy\kern\src\rbf.py", line 345, in psi0
+    return self.psicomp.psicomputations(self, Z, variational_posterior)[0]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\decorator\__init__.py", line 247, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\paramz\caching.py", line 283, in g
+    return cacher(*args, **kw)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\paramz\caching.py", line 179, in __call__
+    new_output = self.operation(*args, **kw)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\GPy\kern\src\psi_comp\__init__.py", line 28, in psicomputations
+    return rbf_psi_comp.psicomputations(variance, lengthscale, Z, variational_posterior, return_psi2_n=return_psi2_n)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\GPy\kern\src\psi_comp\rbf_psi_comp.py", line 18, in psicomputations
+    psi2 = _psi2computations(variance, lengthscale, Z, mu, S)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\paramz\caching.py", line 179, in __call__
+    new_output = self.operation(*args, **kw)
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\site-packages\GPy\kern\src\psi_comp\rbf_psi_comp.py", line 48, in __psi2computations
+    _psi2_exp2 = -(np.square(mu)*denom).sum(axis=-1)[:,None,None]+(2*(mu*denom).dot(Z_hat.reshape(M*M,Q).T) - denom.dot(np.square(Z_hat).reshape(M*M,Q).T)).reshape(N,M,M)
+                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 2.14 GiB for an array with shape (2856, 100489) and data type float64
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sysdp\OneDrive - ìáç™ëÂäw\Desktop\Research\MY PAPERS\hybrid_svss_asde\predictor_comparison\why_dgpr\why.py", line 77, in <module>
+    p.map(job, [(f, q) for f in FPGAS for q in range(1, 33) if not os.path.exists(f"{R}/f{f}_p{q}.csv")], chunksize=1)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sysdp\AppData\Local\Programs\Python\Python314\Lib\multiprocessing\pool.py", line 774, in get
+    raise self._value
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 2.14 GiB for an array with shape (2856, 100489) and data type float64

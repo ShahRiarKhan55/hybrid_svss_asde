@@ -1,0 +1,63 @@
+19:01:36 FPGA-5 done
+19:01:44 FPGA-16 done
+19:01:46 FPGA-3 done
+19:02:04 FPGA-13 done
+19:02:06 FPGA-12 done
+19:02:07 FPGA-4 done
+19:02:10 FPGA-1 done
+19:02:10 FPGA-14 done
+19:02:13 FPGA-6 done
+19:02:13 FPGA-9 done
+19:02:15 FPGA-10 done
+19:02:16 FPGA-2 done
+19:02:17 FPGA-11 done
+19:02:17 FPGA-8 done
+19:02:18 FPGA-7 done
+19:02:18 FPGA-15 done
+19:39:35 FPGA-23 done
+19:39:51 FPGA-18 done
+19:39:55 FPGA-19 done
+19:39:56 FPGA-17 done
+19:40:11 FPGA-27 done
+19:40:14 FPGA-22 done
+19:40:14 FPGA-28 done
+19:40:20 FPGA-32 done
+19:40:24 FPGA-20 done
+19:40:26 FPGA-21 done
+19:40:31 FPGA-25 done
+19:40:36 FPGA-24 done
+19:40:39 FPGA-31 done
+19:40:40 FPGA-26 done
+19:40:45 FPGA-29 done
+19:40:50 FPGA-30 done
+20:19:09 FPGA-33 done
+20:19:33 FPGA-37 done
+20:19:37 FPGA-41 done
+20:19:42 FPGA-47 done
+20:19:42 FPGA-34 done
+20:19:43 FPGA-36 done
+20:19:45 FPGA-44 done
+20:19:49 FPGA-35 done
+20:19:54 FPGA-39 done
+20:19:55 FPGA-43 done
+20:19:57 FPGA-38 done
+20:20:00 FPGA-40 done
+20:20:02 FPGA-46 done
+20:20:02 FPGA-42 done
+20:20:08 FPGA-45 done
+20:20:10 FPGA-48 done
+20:31:35 FPGA-49 done
+20:31:35 FPGA-50 done
+                     model  mean_delta  std_per_path  sec_per_path  p_vs_paper_GPR  delta_by_train_criterion        picked
+      GPR  RBF iso (paper)      0.0798        0.0239        0.9898             NaN                    0.0758 ARD 1574/1600
+              GPR  RBF ARD      0.0758        0.0238        1.1886             0.0                    0.0758 ARD 1574/1600
+              SVR  untuned      0.0757        0.0221        0.1031             0.0                       NaN              
+             SVR  CV-tuned      0.0770        0.0223        0.6007             0.0                       NaN              
+              RF   untuned      0.0769        0.0262        0.3096             0.0                       NaN              
+             RF   CV-tuned      0.0748        0.0250        5.5631             0.0                       NaN              
+              MLP  untuned      0.0787        0.0240        0.6381             0.0                       NaN              
+             MLP  CV-tuned      0.0782        0.0243        4.0441             0.0                       NaN              
+           Deep GP RBF iso      0.0794        0.0243       34.8873             0.0                    0.0793 ARD 1436/1600
+           Deep GP RBF ARD      0.0792        0.0241       35.2427             0.0                    0.0793 ARD 1436/1600
+(Deep GP iso, earlier run)      0.0795        0.0243       26.7245             0.0                       NaN              
+iso rerun vs earlier run, max |diff| per path: 0.01694734620468301

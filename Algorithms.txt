@@ -1,0 +1,113 @@
+\subsection{Algorithms}
+\begin{small}
+\begin{algorithm}[H]
+\caption{Phase 1: Similarity-Variance based Sample
+Selection (SVSS)}
+\label{alg:svss}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} $P$ --- active path RO points;
+$T_1 = \lfloor 0.03|P| \rfloor$;
+$\text{step} = \lfloor 0.01|P| \rfloor$;
+$\alpha = 0.5$, $\beta = 0.5$
+\STATE \textbf{Output:} $S$ --- SVSS anchor training set,
+$|S| = T_1$
+\STATE $S \leftarrow \{\text{1\% points drawn uniformly
+at random from } P\}$
+\WHILE{$|S| < T_1$}
+  \STATE Fit GPR (RBF, normalizer) on $S$
+  \STATE Predict $(\mu_i, \sigma_i^2)$ for all
+  $i \in P \setminus S$ and $j \in S$
+  \STATE Form feature vectors $\mathbf{f}_i =
+  [\mu_i, \sigma_i^2]$ for all
+  $i \in (P \setminus S) \cup S$
+  \STATE Z-score normalize $\{\mathbf{f}_i\}$ jointly
+  $\rightarrow \{\mathbf{z}_i\}$
+  \STATE $\mathbf{c} \leftarrow
+  \frac{1}{|S|}\sum_{j \in S} \mathbf{z}_j$
+  \FOR{each candidate $i \in P \setminus S$}
+    \STATE $\text{Sim}(i) \leftarrow$ mean-centered cosine
+    similarity of $\mathbf{z}_i$ with $\mathbf{c}$
+    \STATE $\text{Sim}_n(i) \leftarrow$
+    min-max normalize $\text{Sim}(i)$
+    \STATE $\text{Var}_n(i) \leftarrow$
+    min-max normalize $\sigma_i^2$
+    \STATE $\text{Score}(i) \leftarrow
+    \alpha \cdot \text{Sim}_n(i) + \beta \cdot
+    \text{Var}_n(i)$
+    \hfill
+  \ENDFOR
+  \STATE $\text{pick} \leftarrow \min(\text{step},\
+  T_1 - |S|)$
+  \STATE Add top-$\text{pick}$ candidates
+  (highest Score) to $S$
+\ENDWHILE
+\STATE \textbf{return} $S$
+\end{algorithmic}
+\end{algorithm}
+\end{small}
+
+\begin{small}
+\begin{algorithm}[H]
+\caption{Phase 2: Adaptive Short Distance Elimination (ASDE)}
+\label{alg:asde}
+\begin{algorithmic}[1]
+\STATE \textbf{Input:} $P$; $S$ from Algorithm~\ref{alg:svss};
+$T = \lfloor 0.10|P| \rfloor$; $K = 2$; $\tau = 2.0$
+\STATE \textbf{Output:} $S$ --- extended training set, $|S| = T$
+\FOR{each $j \in S$}
+  \STATE $\text{NN}(j) \leftarrow K$ nearest neighbors of $j$
+  in $S \setminus \{j\}$ (Euclidean distance)
+  \IF{$|\text{NN}(j)| = 0$}
+    \STATE $(\alpha_j, \beta_j) \leftarrow (1, 1)$;
+    \textbf{continue}
+  \ENDIF
+  \STATE $\overline{dx}_j \leftarrow
+  \frac{1}{K}\sum_{p \in \text{NN}(j)} |x_j - x_p|$
+  \hfill 
+  \STATE $\overline{dy}_j \leftarrow
+  \frac{1}{K}\sum_{p \in \text{NN}(j)} |y_j - y_p|$
+  \STATE $R_j \leftarrow \text{std}(\{v_p :
+  p \in \text{NN}(j)\})$ \hfill 
+  \STATE $\text{bump}_j \leftarrow 1$ if $R_j > \tau$
+  else $0$ \hfill 
+  \STATE $\alpha_j \leftarrow \lceil \overline{dx}_j \rceil
+  + \text{bump}_j$ \hfill 
+  \STATE $\beta_j \leftarrow \lceil \overline{dy}_j \rceil
+  + \text{bump}_j$
+\ENDFOR
+\STATE $\bar{\alpha} \leftarrow \text{mean}(\{\alpha_j\})$;
+\quad $\bar{\beta} \leftarrow \text{mean}(\{\beta_j\})$
+\end{algorithmic}
+\end{algorithm}
+\end{small}
+\begin{small}
+\begin{algorithm}
+\begin{algorithmic}[1]
+\setcounter{ALC@line}{15}
+\FOR{each $i$ in candidates}
+  \IF{$|S| = T$}
+    \STATE \textbf{break}
+  \ENDIF
+  \STATE accepted $\leftarrow$ \textbf{True}
+  \FOR{each $j \in S$}
+    \IF{$|x_i - x_j| \leq \alpha_j$
+    \textbf{and} $|y_i - y_j| \leq \beta_j$}
+      \STATE accepted $\leftarrow$ \textbf{False};
+      \textbf{break}
+    \ENDIF
+  \ENDFOR
+  \IF{accepted}
+    \STATE $S \leftarrow S \cup \{i\}$
+    \STATE $(\alpha_i, \beta_i) \leftarrow
+    (\bar{\alpha}, \bar{\beta})$
+  \ENDIF
+\ENDFOR
+\IF{$|S| < T$}
+  \STATE leftover $\leftarrow$ shuffle$(P \setminus S)$
+  \STATE $S \leftarrow S \cup
+  \text{leftover}[:T - |S|]$
+\ENDIF
+\STATE \textbf{return} $S$
+\end{algorithmic}
+\end{algorithm}
+\end{small}

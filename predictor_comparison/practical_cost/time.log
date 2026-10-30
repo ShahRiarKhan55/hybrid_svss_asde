@@ -1,0 +1,34 @@
+hardware: {'cpu': '12th Gen Intel(R) Core(TM) i7-12700H', 'cores_threads': '14 cores / 20 threads', 'ram_gb': '31.7', 'os': 'Windows-11-10.0.26300-SP0', 'python': '3.14.7', 'numpy': '2.3.5', 'gpy': '1.14.2'}
+10:41:04 path 1 {'al': 35.3, 'svts': 52.6, 'sde': 0.1, 'hybrid': 4.4}
+10:42:38 path 2 {'al': 45.7, 'svts': 45.7, 'sde': 0.1, 'hybrid': 2.4}
+10:44:15 path 3 {'al': 41.9, 'svts': 49.2, 'sde': 0.1, 'hybrid': 5.1}
+10:45:46 path 4 {'al': 41.5, 'svts': 46.4, 'sde': 0.1, 'hybrid': 3.1}
+10:47:27 path 5 {'al': 52.1, 'svts': 44.8, 'sde': 0.1, 'hybrid': 4.1}
+10:49:16 path 6 {'al': 49.0, 'svts': 56.9, 'sde': 0.1, 'hybrid': 3.5}
+10:50:45 path 7 {'al': 40.4, 'svts': 44.4, 'sde': 0.1, 'hybrid': 3.2}
+10:52:16 path 8 {'al': 43.0, 'svts': 46.2, 'sde': 0.1, 'hybrid': 2.2}
+10:53:51 path 9 {'al': 43.3, 'svts': 47.9, 'sde': 0.1, 'hybrid': 4.0}
+10:55:29 path 10 {'al': 42.3, 'svts': 49.3, 'sde': 0.1, 'hybrid': 6.1}
+10:57:05 path 11 {'al': 55.6, 'svts': 38.4, 'sde': 0.1, 'hybrid': 1.9}
+10:58:33 path 12 {'al': 41.8, 'svts': 43.0, 'sde': 0.1, 'hybrid': 3.0}
+11:00:01 path 13 {'al': 35.2, 'svts': 50.0, 'sde': 0.1, 'hybrid': 2.9}
+11:01:40 path 14 {'al': 43.3, 'svts': 51.4, 'sde': 0.1, 'hybrid': 3.5}
+11:03:16 path 15 {'al': 45.3, 'svts': 47.3, 'sde': 0.1, 'hybrid': 3.4}
+11:04:48 path 16 {'al': 45.9, 'svts': 43.4, 'sde': 0.1, 'hybrid': 3.0}
+11:06:29 path 17 {'al': 50.4, 'svts': 47.3, 'sde': 0.1, 'hybrid': 3.0}
+11:08:05 path 18 {'al': 44.9, 'svts': 48.6, 'sde': 0.1, 'hybrid': 2.7}
+11:09:28 path 19 {'al': 34.1, 'svts': 45.5, 'sde': 0.1, 'hybrid': 3.2}
+11:11:08 path 20 {'al': 43.5, 'svts': 51.7, 'sde': 0.1, 'hybrid': 4.2}
+11:12:40 path 21 {'al': 40.5, 'svts': 48.9, 'sde': 0.1, 'hybrid': 2.9}
+11:14:07 path 22 {'al': 41.8, 'svts': 41.9, 'sde': 0.1, 'hybrid': 3.4}
+11:15:29 path 23 {'al': 38.5, 'svts': 39.7, 'sde': 0.1, 'hybrid': 2.8}
+11:16:56 path 24 {'al': 40.2, 'svts': 43.8, 'sde': 0.1, 'hybrid': 3.2}
+11:18:17 path 25 {'al': 37.9, 'svts': 41.1, 'sde': 0.1, 'hybrid': 1.9}
+11:19:36 path 26 {'al': 41.3, 'svts': 35.3, 'sde': 0.1, 'hybrid': 2.0}
+11:20:49 path 27 {'al': 34.7, 'svts': 36.8, 'sde': 0.1, 'hybrid': 2.0}
+11:21:58 path 28 {'al': 31.0, 'svts': 35.2, 'sde': 0.1, 'hybrid': 2.3}
+11:23:20 path 29 {'al': 39.9, 'svts': 40.3, 'sde': 0.1, 'hybrid': 2.4}
+11:24:45 path 30 {'al': 41.5, 'svts': 40.6, 'sde': 0.1, 'hybrid': 2.8}
+11:26:11 path 31 {'al': 39.2, 'svts': 43.5, 'sde': 0.1, 'hybrid': 3.3}
+11:27:37 path 32 {'al': 35.7, 'svts': 46.0, 'sde': 0.1, 'hybrid': 3.9}
+final GPR timing done
